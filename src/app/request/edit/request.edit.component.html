@@ -1,0 +1,15 @@
+<app-ui-top-navigation></app-ui-top-navigation>
+
+<div style="padding: 10px">
+
+  <form class="form" [formGroup]="form">
+    <app-ui-input label="Title" placeholder="Enter title...." [control]="form.get('title')"></app-ui-input>
+    <app-ui-input label="Description" placeholder="Enter description...." [control]="form.get('description')"></app-ui-input>
+
+    <button md-raised-button color="primary" (click)="createRequest()" [disabled]="!form.valid">Create Request</button>
+  </form>
+
+</div>
+
+
+

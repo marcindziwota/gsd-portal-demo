@@ -1,0 +1,15 @@
+<div class="right">
+  Welcome {{auth.getUserName()}}
+  <button md-raised-button color="warn" (click)="auth.logout()" *ngIf="auth.authenticated()">Log Out</button>
+</div>
+
+<ul class="topnav" #topnav>
+  <li *ngIf="auth.authenticated()">
+    <a routerLink="/hces" routerLinkActive="active">Healthcare Entities</a>
+  </li>
+  <li class="icon">
+    <a (click)="toggle()">&#9776;</a>
+  </li>
+</ul>
+
+
