@@ -4,17 +4,22 @@ interface IDBConfig {
 }
 
 var pg = require('pg');
-var connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/dreamhouse';
+
+var connectionString = 'postgres://localhost:5432/dreamhouse';
+var schema = '';
+
+if (process.env.DATABASE_URL) {
+  connectionString = process.env.DATABASE_URL;
+  schema = 'salesforce.';
+}
+
 var client = new pg.Client(connectionString);
-var schema = 'salesforce.';
+
 client.connect();
 
 client.query('SELECT * FROM salesforce.Account', function(error, data) {
   if (error !== null) {
     require('../db/demo.js')(client);
-  }
-  else {
-    var schema = 'salesforce.';
   }
 });
 

@@ -8,15 +8,15 @@ module.exports = function(client) {
             id SERIAL NOT NULL,
             sfid CHARACTER VARYING(18) UNIQUE,
             name CHARACTER VARYING(80),
-            GSD_BillingCountry2__c CHARACTER VARYING(256),
+            GSD_HceFullBillingAddress__c CHARACTER VARYING(256),
             gsd_hcetype__c CHARACTER VARYING(20)
            );`);
 
-           client.query(`INSERT INTO Account (sfid, name, GSD_BillingCountry2__c, gsd_hcetype__c) VALUES ('sfid1', 'Berlin Hospital', 	'Warschauer St 7,<br>31-155, Berlin,<br>Germany', 'HCO');`);
-           client.query(`INSERT INTO Account (sfid, name, GSD_BillingCountry2__c, gsd_hcetype__c) VALUES ('sfid2', 'London Hospital', 'Warsaw St 7,<br>31-155, London,<br>UK', 'PO');`);
-           client.query(`INSERT INTO Account (sfid, name, GSD_BillingCountry2__c, gsd_hcetype__c) VALUES ('sfid3', 'Warsaw Hospital', 'Al. Jerozolimskie 72,<br>31-155, Warsaw,<br>Poland', 'HCO');`);
-           client.query(`INSERT INTO Account (sfid, name, GSD_BillingCountry2__c, gsd_hcetype__c) VALUES ('sfid4', 'Paris Hospital', 'Champs Eysee 90,<br>31-155, Paris,<br>France', 'HCO');`);
-           client.query(`INSERT INTO Account (sfid, name, GSD_BillingCountry2__c, gsd_hcetype__c) VALUES ('sfid5', 'Cracow Hospital', 'Parkowa 34,<br>00-155, Cracow,<br>Poland', 'PO');`);
+           client.query(`INSERT INTO Account (sfid, name, GSD_HceFullBillingAddress__c, gsd_hcetype__c) VALUES ('sfid1', 'Berlin Hospital very long name extended', 	'Warschauer St 7,<br>31-155, Berlin,<br>Germany', 'HCO');`);
+           client.query(`INSERT INTO Account (sfid, name, GSD_HceFullBillingAddress__c, gsd_hcetype__c) VALUES ('sfid2', 'London Hospital', 'Warsaw St 7,<br>31-155, London,<br>UK', 'PO');`);
+           client.query(`INSERT INTO Account (sfid, name, GSD_HceFullBillingAddress__c, gsd_hcetype__c) VALUES ('sfid3', 'Warsaw Hospital', 'Al. Jerozolimskie 72,<br>31-155, Warsaw,<br>Poland', 'HCO');`);
+           client.query(`INSERT INTO Account (sfid, name, GSD_HceFullBillingAddress__c, gsd_hcetype__c) VALUES ('sfid4', 'Paris Hospital', 'Champs Eysee 90,<br>31-155, Paris,<br>France', 'HCO');`);
+           client.query(`INSERT INTO Account (sfid, name, GSD_HceFullBillingAddress__c, gsd_hcetype__c) VALUES ('sfid5', 'Cracow Hospital', 'Parkowa 34,<br>00-155, Cracow,<br>Poland', 'PO');`);
       }
     });
 

@@ -2,7 +2,7 @@
 
 <md-grid-list *ngIf="(hces$ | async)?.data" cols="4" [style.background]="'#EBE4FD'">
    <md-grid-tile *ngFor="let hce of (hces$ | async)?.data">
-       <md-card>
+       <md-card flex="25">
             <md-card-title>{{hce.name}}</md-card-title>   
             <md-card-content>
                 <h4>Type</h4>

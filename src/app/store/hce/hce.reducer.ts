@@ -14,7 +14,7 @@ export class Hce implements IHce {
 } 
 
 let prettifyHce = (hce) => {
-    return new Hce(hce.sfid, hce.name, hce.gsd_hcetype__c, hce.gsd_billingcountry2__c);
+    return new Hce(hce.sfid, hce.name, hce.gsd_hcetype__c, hce.gsd_hcefullbillingaddress__c);
 };
 
 export const HceReducer: ActionReducer<IHce> = (state: IHce, action: Action): IHce => {
