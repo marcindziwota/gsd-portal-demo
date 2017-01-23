@@ -1,7 +1,7 @@
 {
-  "name": "angular2-express-starter",
+  "name": "gsd-portal-demo",
   "version": "1.0.0",
-  "description": "Starter application of Angular2 with Express",
+  "description": "Portal prototype",
   "main": "server/app.js",
   "license": "MIT",
   "angular-cli": {},
@@ -16,9 +16,8 @@
     "_server:build": "tsc -p ./server",
     "postinstall": "npm run build"
   },
-  "author": "Vlado Tešanović",
   "repository": {
-    "url": "https://github.com/vladotesanovic/angular2-express-starter"
+    "url": "https://github.com/marcindziwota/gsd-portal-demo"
   },
   "private": true,
   "dependencies": {
