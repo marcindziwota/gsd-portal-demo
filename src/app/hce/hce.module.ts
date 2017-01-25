@@ -7,6 +7,7 @@ import { routing } from './hce.router';
 import { SharedModule } from '../shared/shared.module';
 
 import { MaterialModule } from '@angular/material';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { MaterialModule } from '@angular/material';
     ReactiveFormsModule,
     SharedModule,
     routing,
-    MaterialModule.forRoot()
+    MaterialModule.forRoot(),
+    FlexLayoutModule.forRoot()
   ],
   declarations: [
     HceListComponent

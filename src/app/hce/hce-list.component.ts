@@ -7,7 +7,8 @@ import { IHce } from '../store/hce/hce.reducer';
 
 @Component({
   selector: 'hce-list',
-  templateUrl: './hce-list.component.html'
+  templateUrl: './hce-list.component.html',
+  styleUrls: ['./hce-list.component.css']
 })
 
 export class HceListComponent {

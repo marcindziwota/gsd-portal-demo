@@ -1,18 +1,12 @@
 <app-ui-top-navigation></app-ui-top-navigation>
 
-<md-grid-list *ngIf="(hces$ | async)?.data" cols="4" [style.background]="'#EBE4FD'">
-   <md-grid-tile *ngFor="let hce of (hces$ | async)?.data">
-       <md-card flex="25">
-            <md-card-title>{{hce.name}}</md-card-title>   
-            <md-card-content>
-                <h4>Type</h4>
-                <p>{{hce.type}}</p>
-                <h4>Address</h4>
-                <p [innerHTML]="hce.address"></p>
-            </md-card-content>
-            <md-card-actions>
-                <button md-raised-button color="primary" (click)="createRequest(hce.sfid)">Create Request</button>
-            </md-card-actions>
-        </md-card>
-    </md-grid-tile>
-</md-grid-list>
+<div id="cards" *ngIf="(hces$ | async)?.data" style="background-color: #EBE4FD;">
+    <div *ngFor="let hce of (hces$ | async)?.data" style="background-color:#fff;">
+        <h3>{{hce.name}}</h3> 
+        <h4>Type</h4>
+        <p>{{hce.type}}</p>
+        <h4>Address</h4>
+        <p [innerHTML]="hce.address"></p>
+        <button md-raised-button color="primary" (click)="createRequest(hce.sfid)">Create Request</button>
+    </div>
+</div>
