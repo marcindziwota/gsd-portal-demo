@@ -17,3 +17,8 @@
     padding-bottom: 5px;
     padding-left: 10px;
 }
+
+div button {
+    position: relative;
+    bottom: 10px;
+}
